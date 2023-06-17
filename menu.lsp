@@ -1,5 +1,8 @@
-;EL -JTimana
-(load "registrarLibro.lsp")
+;BMajin-JRuano
+(load "estructuras.lsp")
+(load "registrar-Biblioteca.lsp")
+
+(crear)
 
 
 (defun mensaje()
@@ -24,12 +27,12 @@
 	(print "   Digite la opcion:")
       (setq opcion (read))	
   	(case opcion
-		(1 (mensaje))
+		(1 (registrarBiblioteca))
 		(2 (registrarLibro))
 		(3 (print "mundo"))
 	    (otherwise nil)
 	)
-	(when (eq opcion 6) (print "fin programa")(return))
+	(when (eq opcion 7) (print "fin programa")(return))
   )
 
 
