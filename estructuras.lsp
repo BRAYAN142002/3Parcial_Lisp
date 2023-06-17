@@ -30,6 +30,7 @@
     nit
     nombre
     direccion
+    v_libros
 )
 ;crear instancia para  manipular la estrucutura  de bibliotecas
 (setq b (make-Biblioteca))
