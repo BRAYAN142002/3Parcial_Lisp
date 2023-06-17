@@ -16,38 +16,49 @@
         ) 
     )
     (format t "===========================================~%")
+
     (setq contadorLibro 0)
-    (loop 
-        (setq contadorBiblioteca 0)
-        (print "Digite el Nit de la biblioteca: ")
-        (setq nit (read))
-        (loop 
-            (setq auxBiblioteca (aref v_bibliotecas contadorBiblioteca))  
-            (if ( eq(Biblioteca-nit auxBiblioteca) nit)
-                (progn
+    (setq contadorBiblioteca 0)
+    (setq bandera 0)
+    (print "Digite el Nit de la biblioteca: ")
+    (setq nit (read))
+    (loop        
+        (setq auxBiblioteca (aref v_bibliotecas contadorBiblioteca))
+        (if (eq (Biblioteca-nit auxBiblioteca) nit)
+            (progn                   
+                (loop                                                
+                    (setq l (make-Libro))
                     (print "Digite el codigo del libro: ")
-                    (setf (((aref Biblioteca-v_libros 0)) auxBiblioteca) (read) )              
-                )
-                (print "La biblioteca no existe")
-            )  
-            (setq contadorBiblioteca (+ contadorBiblioteca 1))                     
-            (when (> contadorBiblioteca 1)
-                (return)
-            )
-        )  
-        (print "Desea registrar otro libro? (s/n)")
-        (setq respuesta (read))
-        (if (eq respuesta "n")
+                    (setf(Libro-codigo l)(read))
+                    (print "Digite el titulo del libro: ")
+                    (setf(Libro-titulo l)(read))
+                    (print "Digite la categoria del libro: ")
+                    (setf(Libro-categoria l)(read))                      
+
+                    (setf (aref v_libros contadorLibro) l)
+                    (setq contadorLibro (+ contadorLibro 1))
+                    (when (> contadorLibro 2)
+                        (return)
+                    )
+                ) 
+                (setf (Biblioteca-v_libros auxBiblioteca) v_libros) 
+                (setq bandera 1)
+            )            
+        ) 
+        (setq contadorBiblioteca (+ contadorBiblioteca 1))
+        (when (>= contadorBiblioteca longitudBibliotecas)
             (return)
-        )
-        (setq contadorLibro (+ contadorLibro 1)) 
-        (when (> contadorLibro 2)
-            (return)
-        )
+        ) 
+
+    ) 
+    (if (eq bandera 0)
+        (print "La biblioteca no existe")  
+        (print "Libro registrado con exito")
     )
-    
-    
+
 )
+
+
 
 
 

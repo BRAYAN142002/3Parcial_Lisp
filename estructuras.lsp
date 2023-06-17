@@ -1,8 +1,10 @@
 
 (defun crear()
 
+;longitud del vector de libros
+(setq longitudLibros 3)
 ;crear vector de libros 
-(setq v_libros (make-array 3))
+(setq v_libros (make-array longitudLibros))
 ;crear la estructura del libro 
 (defstruct Libro
     codigo
@@ -21,9 +23,10 @@
 
 
 
-
+;longitud del vector de bibliotecas
+(setq longitudBibliotecas 2)
 ;crear vector de bibliotecas
-(setq v_bibliotecas (make-array 2))
+(setq v_bibliotecas (make-array longitudBibliotecas))
 
 ;crear estructura de biblioteca
 (defstruct Biblioteca
