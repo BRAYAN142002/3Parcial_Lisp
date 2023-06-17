@@ -17,7 +17,7 @@
         (print "libros completados")
     )
      (setq contador (+ contador 1))
-	 (when (> contador 4)(return))
+	 (when (> contador 1)(return))
 )
 
 )
