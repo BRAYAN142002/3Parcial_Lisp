@@ -1,11 +1,11 @@
 
 (defun registrarBiblioteca()
  (setq contador 0)
-(setq b (make-Biblioteca))
+
 (loop 
     (if (eq (aref v_bibliotecas contador) 0)
         (progn
-           
+            (setq b (make-Biblioteca))
             (print "Digite el nit de la biblioteca: ")
             (setf (Biblioteca-nit b)(read))
             (print "digite el nombre de la biblioteca: ")
