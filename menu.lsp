@@ -1,6 +1,7 @@
 ;BMajin-JRuano
 (load "estructuras.lsp")
 (load "registrar-Biblioteca.lsp")
+(load "registrarLibro.lsp")
 
 (crear)
 
