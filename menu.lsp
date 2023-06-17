@@ -18,6 +18,7 @@
 	(print "   4.   Buscar Libro ")
 	(print "   5.  	Consultar Libro ")
 	(print "   6.  	Consultar Libro ")
+	(print "   6.  	Salir ")
 	(format t" ~%")
 	(print "   Digite la opcion:")
       (setq opcion (read))	

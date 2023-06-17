@@ -1,3 +1,8 @@
+(load "estructuras")
+
+
+
+
 
 (setq b(make-Biblioteca))
 (print "Digite el nit de la biblioteca: ")
