@@ -2,6 +2,7 @@
 (load "estructuras.lsp")
 (load "registrar-Biblioteca.lsp")
 (load "registrarLibro.lsp")
+(load "buscarBibliotecaNit.lsp")
 
 (crear)
 
@@ -30,7 +31,7 @@
   	(case opcion
 		(1 (registrarBiblioteca))
 		(2 (registrarLibro))
-		(3 (print "mundo"))
+		(3 (buscarBibliotecaNit))
 	    (otherwise nil)
 	)
 	(when (eq opcion 7) (print "fin programa")(return))
