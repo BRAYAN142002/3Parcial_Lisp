@@ -1,3 +1,4 @@
+
 (defun librosCategoria()
     (print " ===========================================")
     (print " |                 Categorias              |")
@@ -17,20 +18,20 @@
 	)
     (print "Digite el nit de la biblioteca: ")
     (setq nit(read))
+   
     (setq contadorBiblioteca 0)
     (setq contadorLibro 0)
+    (setq numLibros 0)
     (loop 
-         (print "+++++++++++++++++++++")
         (setq auxBiblioteca (aref v_bibliotecas contadorBiblioteca))
         (if (eq (Biblioteca-nit auxBiblioteca) nit)
             (progn
-                (print "----------------------")
                 (setq auxLibro (aref (Biblioteca-v_libros auxBiblioteca) contadorLibro))
                 (loop 
-                    (if(eq(Libro-categoria auxLibro) auxCategoria)
-                      (print "·····················")
-                        (setq contadorLibro (1+ contadorLibro) )
+                    (if(string= (Libro-categoria auxLibro) auxCategoria)   
+                        (setq numLibros (1+ numLibros) )  
                     )
+                    (setq contadorLibro (+ contadorLibro 1))    
                     (when (>= contadorLibro longitudLibros)(return))
                     (setq auxLibro (aref v_libros contadorLibro))
                 )
@@ -41,9 +42,9 @@
             (return)
         )
     )
-
-
-    (format t "El Numero de libros de ~S~ son: "(auxCategoria))
+    (print "----------Numero de libros---------")
+    (format t "El Numero de libros de ~S "auxCategoria)
+    (format t "son:~D ~%"numLibros)
 )
 
    

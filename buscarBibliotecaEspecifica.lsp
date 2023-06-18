@@ -7,10 +7,8 @@
     (setq auxNit (read))
 
     (setq contadorBibliotecas 0)
-    (print "xxxxxxxxxxxxxxx")
     (loop 
         (setq auxBiblioteca (aref v_bibliotecas contadorBibliotecas))
-          (print "LLLLLLLLLLLLLL")
         (if (eq (Biblioteca-nit auxBiblioteca) auxNit )
                 (progn 
                     (format t "Nit ~D:~%"(Biblioteca-nit auxBiblioteca)) 

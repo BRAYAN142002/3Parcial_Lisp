@@ -22,7 +22,6 @@
 )
 
 
-
 ;longitud del vector de bibliotecas
 (setq longitudBibliotecas 2)
 ;crear vector de bibliotecas
@@ -35,8 +34,13 @@
     direccion
     v_libros
 )
-;crear instancia para  manipular la estrucutura  de bibliotecas
-(setq b (make-Biblioteca))
+;funcion para crear una instancia de la estructura biblioteca e inicar el vector de libros con ceros
+(defun inicializarBiblioteca ()
+  (make-Biblioteca :nit nil
+                   :nombre nil
+                   :direccion nil
+                   :v_libros(make-array 3 :initial-element 0)))
+
 ;inicilaizacion del vector biblioteca con ceros
 (setq k 0)
 (loop
