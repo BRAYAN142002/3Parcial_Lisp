@@ -34,7 +34,7 @@
     direccion
     v_libros
 )
-;funcion para crear una instancia de la estructura biblioteca
+;funcion para crear una instancia de la estructura biblioteca e inicar el vector de libros con ceros
 (defun inicializarBiblioteca ()
   (make-Biblioteca :nit nil
                    :nombre nil

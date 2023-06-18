@@ -3,14 +3,9 @@
 (load "registrar-Biblioteca.lsp")
 (load "registrarLibro.lsp")
 (load "buscarBibliotecaNit.lsp")
+(load "validaciones.lsp")
 
 (crear)
-
-
-(defun mensaje()
-  (print "buenos dias")
-) 
-
 
 (loop
       
@@ -27,7 +22,8 @@
 	(print "   7. Salir ")
 	(format t" ~%")
 	(print "   Digite la opcion:")
-      (setq opcion (read))	
+	(setq opcion (ingresarNumero))
+
   	(case opcion
 		(1 (registrarBiblioteca))
 		(2 (registrarLibro))
@@ -36,7 +32,5 @@
 	)
 	(when (eq opcion 7) (print "fin programa")(return))
   )
-
-
 
 

@@ -7,9 +7,9 @@
     (loop 
         (format t "~%===========================================~%")
         (setq auxBiblioteca (aref v_bibliotecas contador))
-        (format t "Nit ~D:~%"(Biblioteca-nit auxBiblioteca)) 
-        (format t "Nombre ~S:~%"(Biblioteca-nombre auxBiblioteca))
-        (format t "Direccion ~S:~%"(Biblioteca-direccion auxBiblioteca))
+        (format t "Nit: ~D~%"(Biblioteca-nit auxBiblioteca)) 
+        (format t "Nombre: ~S~%"(Biblioteca-nombre auxBiblioteca))
+        (format t "Direccion: ~S~%"(Biblioteca-direccion auxBiblioteca))
         (setq contador (+ contador 1))
         (when (> contador 1)
             (return)
@@ -21,7 +21,7 @@
     (setq contadorBiblioteca 0)
     (setq bandera 0)
     (print "Digite el Nit de la biblioteca: ")
-    (setq nit (read))
+    (setq nit (ingresarNumero))
     (loop        
         (setq auxBiblioteca (aref v_bibliotecas contadorBiblioteca))
         (if (eq (Biblioteca-nit auxBiblioteca) nit)
@@ -31,11 +31,11 @@
                         (loop                                                
                             (setq l (make-Libro))
                             (print "Digite el codigo del libro: ")
-                            (setf(Libro-codigo l)(read))
+                            (setf(Libro-codigo l)(ingresarNumero))
                             (print "Digite el titulo del libro: ")
-                            (setf(Libro-titulo l)(read))
+                            (setf(Libro-titulo l)(read-line))
                             (print "Digite la categoria del libro: ")
-                            (setf(Libro-categoria l)(read))                      
+                            (setf(Libro-categoria l)(read-line))                      
 
                             (setf (aref v_libros contadorLibro) l)
                             (setq contadorLibro (+ contadorLibro 1))
