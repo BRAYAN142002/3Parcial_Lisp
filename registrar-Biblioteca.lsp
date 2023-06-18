@@ -1,4 +1,6 @@
-
+;Esta funcion se encarga de inicializar una estructura biblioteca "(inicializarBiblioteca)"
+;y guardarla en un vector de bibliotecas "v_bibliotecas"
+;Biblioteca es una estructura que contiene nit, nombre, direccion y un vector de libros
 (defun registrarBiblioteca()
     (print " ===========================================")
     (print " |          Registro de Biblioteca         |")

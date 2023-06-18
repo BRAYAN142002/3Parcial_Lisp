@@ -1,32 +1,34 @@
+;Esta funcion se encarga de registrar un vector de libros en una biblioteca
+;Libro es una estructura que contiene codigo, titulo y categoria
 (defun registrarLibro ()
     (print " ===========================================")
 	(print " |             Registro libro              |")
 	(print " ===========================================") 
     (print "           Bibliotecas registradas          ")  
-    (setq contador 0)
+    (setq contador 0) ;contador para recorrer el vector de bibliotecas
     (loop 
         (format t "~%===========================================~%")
-        (setq auxBiblioteca (aref v_bibliotecas contador))
+        (setq auxBiblioteca (aref v_bibliotecas contador));se obtiene la biblioteca en la posicion contador
         (format t "Nit: ~D~%"(Biblioteca-nit auxBiblioteca)) 
         (format t "Nombre: ~S~%"(Biblioteca-nombre auxBiblioteca))
         (format t "Direccion: ~S~%"(Biblioteca-direccion auxBiblioteca))
         (setq contador (+ contador 1))
-        (when (> contador 1)
+        (when (=> contador longitudBibliotecas)
             (return)
         ) 
     )
     (format t "===========================================~%")
 
     (setq contadorLibro 0)
-    (setq contadorBiblioteca 0)
+    (setq contadorBiblioteca 0);
     (setq bandera 0)
     (print "Digite el Nit de la biblioteca: ")
     (setq nit (ingresarNumero))
     (loop        
-        (setq auxBiblioteca (aref v_bibliotecas contadorBiblioteca))
-        (if (eq (Biblioteca-nit auxBiblioteca) nit)
+        (setq auxBiblioteca (aref v_bibliotecas contadorBiblioteca));obtiene la biblioteca en la posicion contadorBiblioteca
+        (if (eq (Biblioteca-nit auxBiblioteca) nit);compara el nit de la biblioteca con el nit ingresado
             (progn
-                (if (eq (aref (Biblioteca-v_libros auxBiblioteca) 0) 0)
+                (if (eq (aref (Biblioteca-v_libros auxBiblioteca) 0) 0);verifica si el vector de libros esta vacio
                     (progn                   
                         (loop                                                
                             (setq l (make-Libro))
@@ -36,14 +38,15 @@
                             (setf(Libro-titulo l)(read-line))
                             (print "Digite la categoria del libro: ")
                             (setf(Libro-categoria l)(read-line))                      
-
+                            
+                            ;se asigna el libro al vector
                             (setf (aref v_libros contadorLibro) l)
                             (setq contadorLibro (+ contadorLibro 1))
                             (when (> contadorLibro 2)
                                 (return)
                             )
                         ) 
-                        (setf (Biblioteca-v_libros auxBiblioteca) v_libros) 
+                        (setf (Biblioteca-v_libros auxBiblioteca) v_libros);se asigna el vector de libros a la biblioteca
                         (setq bandera 2)
                     )     
                     (setq bandera 1)       
