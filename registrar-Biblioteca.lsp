@@ -7,7 +7,7 @@
 (loop 
     (if (eq (aref v_bibliotecas contador) 0)
         (progn
-            (format t "-----------BIBLIOTECA #~D----------" (+ contador 1))
+            (format t "-----------BIBLIOTECA #~D----------%" (+ contador 1))
 
             (setq b (make-Biblioteca))
             (print "Digite el nit de la biblioteca: ")
@@ -17,11 +17,12 @@
             (print "Digite la direccion de la biblioteca: ")
             (setf (Biblioteca-direccion b)(read))
             (setf (aref v_Bibliotecas contador) b)
-            (print "Deseas registrar otra biblioteca '1'si, '0'No: ")
+            (print "Deseas registrar otra biblioteca 's'si, 'n'No: ")
 
             (setq respuesta (read))
-            (if (eq respuesta "n")
+            (if (equal respuesta "s")
                     (setq contador 2)
+                    (print "saliendo.")
              )
         )
         (if(eq contador 2)
