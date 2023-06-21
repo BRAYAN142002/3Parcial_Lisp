@@ -3,19 +3,8 @@
     (print " ===========================================")
     (print " |                 Categorias              |")
 	(print " ===========================================")  
-    (format t" ~%") 
-	(print "   1. DRAMA ")
-	(print "   2. SUSPENSO ")
-	(print "   3. AVENTURA ")
-    (format t" ~%")
-    (print "   Digite la opcion:")	 
-    (setq opcion (read))
-    (case opcion
-		(1 (setq auxCategoria "DRAMA"))
-		(2 (setq auxCategoria "SUSPENSO"))
-		(3 (setq auxCategoria "AVENTURA"))
-        (otherwise nil)
-	)
+    
+    (setq auxCategoria(menuCategoria))
     (print "Digite el nit de la biblioteca: ")
     (setq nit(read))
    
@@ -28,7 +17,7 @@
             (progn
                 (setq auxLibro (aref (Biblioteca-v_libros auxBiblioteca) contadorLibro))
                 (loop 
-                    (if(string= (Libro-categoria auxLibro) auxCategoria)   
+                    (if(eq (Libro-categoria auxLibro) 'auxCategoria)   
                         (setq numLibros (1+ numLibros) )  
                     )
                     (setq contadorLibro (+ contadorLibro 1))    
@@ -43,6 +32,7 @@
         )
     )
     (print "----------Numero de libros---------")
+    (format t" ~%") 
     (format t "El Numero de libros de ~S "auxCategoria)
     (format t "son:~D ~%"numLibros)
 )

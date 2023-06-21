@@ -1,3 +1,5 @@
+;Esta funcion se encarga de buscar una biblioteca por su nit
+;e imprimir sus datos y los datos de sus libros
 (defun buscarBibliotecaNit()
     (setq contadorBiblioteca 0)
     (setq bandera 0)

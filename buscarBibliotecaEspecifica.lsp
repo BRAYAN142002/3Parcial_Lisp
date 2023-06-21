@@ -5,7 +5,7 @@
 
     (print "Digite el nit de la biblioteca:  ")
     (setq auxNit (read))
-
+    (setq bandera 0)
     (setq contadorBibliotecas 0)
     (loop 
         (setq auxBiblioteca (aref v_bibliotecas contadorBibliotecas))
@@ -34,7 +34,7 @@
                      (setq auxLibro (aref v_libros contadorLibro))
                     )
                 )
-                (print "La biblioteca no existe")
+                (setq bandera (1+ bandera))
                
         )
 
@@ -44,4 +44,9 @@
             (return)
         )
     )
+    (if(eq bandera 2)
+        (print "La Biblioteca no existe")
+        (print "Biblioteca Encontrada ..")
+    )
+
 )

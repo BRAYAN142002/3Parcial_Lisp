@@ -5,7 +5,7 @@
 (load "buscarBibliotecaNit.lsp")
 (load "buscarBibliotecaEspecifica.lsp")
 (load "buscarLibrosCategoria.lsp")
-(load "validaciones.lsp")
+(load "servicio.lsp")
 
 (crear)
 
