@@ -16,7 +16,7 @@
             
             (print "Digite el nit de la biblioteca: ")
             (setq nit(read))
-        
+            (setq bandera 0)       
             (setq contadorBiblioteca 0);iterador para ir avanzando las bibliotecas
             (setq contadorLibro 0);iterador para ir avanzand en el libto
             (setq numLibros 0);contador para los libros de categoria aventura
@@ -42,19 +42,32 @@
                                 )
                             )
                         )
-                    )   
+                    ) 
+                    (setq bandera(+ bandera 1))  
                 )
                 (setq contadorBiblioteca (+ contadorBiblioteca 1))
                 (when (>= contadorBiblioteca longitudBibliotecas) 
                     (return)
                 )
             )
-            (print "----------Numero de libros---------")
-            (format t" ~%") 
-            (format t "El Numero de libros de AVENTURA ")
-            (format t "son:~D ~%"numLibros)
-            (print "Presiones enter para continuar...")
-            (read-char)
+
+            (if (eq bandera 2)
+                (progn
+                    (print "La Biblioteca no existe.")
+                    (print "Presiones enter para continuar...")
+                    (read-char)
+                )
+                (progn
+                    (print "----------Numero de libros---------")
+                    (format t" ~%") 
+                    (format t "El Numero de libros de AVENTURA ")
+                    (format t "son:~D ~%"numLibros)
+                    (print "Presiones enter para continuar...")
+                    (read-char)
+                )
+            )
+
+            
         )
     )
 )
