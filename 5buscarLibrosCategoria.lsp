@@ -6,8 +6,6 @@
     (print " |    Libros De Categoria: AVENTURA        |")
 	(print " ===========================================")  
     
-    ;
-    (setq auxCategoria(menuCategoria))
     (print "Digite el nit de la biblioteca: ")
     (setq nit(read))
    
@@ -36,7 +34,7 @@
     )
     (print "----------Numero de libros---------")
     (format t" ~%") 
-    (format t "El Numero de libros de ~S "auxCategoria)
+    (format t "El Numero de libros de AVENTURA ")
     (format t "son:~D ~%"numLibros)
 )
 
