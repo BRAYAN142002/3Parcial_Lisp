@@ -19,7 +19,7 @@
 	(print "   2. Registrar Libro ")
 	(print "   3. Buscar Biblioteca ")
 	(print "   4. Buscar Libro ")
-	(print "   5. Consultar Libro categoria ")
+	(print "   5. Consultar Libro por categoria Aventura")
 	(print "   6. Salir ")
 	(format t" ~%")
 	(print "   Digite la opcion:")

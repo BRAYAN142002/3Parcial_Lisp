@@ -17,7 +17,7 @@
         (if (eq (Biblioteca-nit auxBiblioteca) nit)
             (progn
                 (setq auxLibro (aref (Biblioteca-v_libros auxBiblioteca) contadorLibro))
-                (loop 
+                (loop                 
                     (if(eq (Libro-categoria auxLibro) 'AVENTURA)   
                         (setq numLibros (1+ numLibros) )  
                     )

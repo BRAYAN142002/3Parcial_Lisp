@@ -6,7 +6,8 @@
 	(print " ===========================================") 
     (print "           Bibliotecas registradas          ")  
     (setq contador 0) ;contador para recorrer el vector de bibliotecas
-    (if(not (aref v_bibliotecas 0) 0)
+    (if(eq (aref v_bibliotecas 0) 0)
+        (print "Error, Debe primero resgitrar Biblioteca")
         (cond
         (loop 
             (format t "~%===========================================~%")
@@ -75,7 +76,7 @@
         (read-char)
 
         )
-        (print "Error, Debe primero resgitrar Biblioteca")
+        
     )
 )
 
