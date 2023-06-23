@@ -29,7 +29,7 @@
 		(1 (registrarBiblioteca))
 		(2 (registrarLibro))
 		(3 (buscarBibliotecaNit))
-		(4 (buscarBibliotecaEspecifica))
+		(4 (buscarLibroEnBiblioteca))
 		(5 (librosCategoria))
 	    (otherwise nil)
 	)
