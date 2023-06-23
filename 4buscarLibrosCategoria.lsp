@@ -1,9 +1,12 @@
-
+;Esta funcion se encarga de consultar el numero de libros que son de
+;la categoria de AVENTURA pra una biblioteca especifica.
+;se le ingresara el nit de la biblioteca
 (defun librosCategoria()
     (print " ===========================================")
-    (print " |                 Categorias              |")
+    (print " |    Libros De Categoria: AVENTURA        |")
 	(print " ===========================================")  
     
+    ;
     (setq auxCategoria(menuCategoria))
     (print "Digite el nit de la biblioteca: ")
     (setq nit(read))
@@ -17,7 +20,7 @@
             (progn
                 (setq auxLibro (aref (Biblioteca-v_libros auxBiblioteca) contadorLibro))
                 (loop 
-                    (if(eq (Libro-categoria auxLibro) 'auxCategoria)   
+                    (if(eq (Libro-categoria auxLibro) 'AVENTURA)   
                         (setq numLibros (1+ numLibros) )  
                     )
                     (setq contadorLibro (+ contadorLibro 1))    

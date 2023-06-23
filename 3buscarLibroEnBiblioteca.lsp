@@ -48,5 +48,7 @@
         (print "La Biblioteca no existe")
         (print "Biblioteca Encontrada ..")
     )
+    (print "Presiones enter para continuar...")
+    (read-char)  
 
 )

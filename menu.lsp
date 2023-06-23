@@ -1,10 +1,10 @@
 ;BMajin-JRuano
 (load "estructuras.lsp")
-(load "registrar-Biblioteca.lsp")
-(load "registrarLibro.lsp")
-(load "buscarBibliotecaNit.lsp")
-(load "buscarBibliotecaEspecifica.lsp")
-(load "buscarLibrosCategoria.lsp")
+(load "0registrarBiblioteca.lsp")
+(load "1registrarLibro.lsp")
+(load "2buscarBibliotecaNit.lsp")
+(load "3buscarLibroEnBiblioteca.lsp")
+(load "4buscarLibrosCategoria.lsp")
 (load "servicio.lsp")
 
 (crear)
