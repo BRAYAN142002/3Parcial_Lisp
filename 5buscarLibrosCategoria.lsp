@@ -4,10 +4,8 @@
 (defun librosCategoria()
     (print " ===========================================")
     (print " |    Libros De Categoria: AVENTURA        |")
-	(print " ===========================================")  
-    
-    ;
-    (setq auxCategoria(menuCategoria))
+	(print " ===========================================")     
+
     (print "Digite el nit de la biblioteca: ")
     (setq nit(read))
    
@@ -19,7 +17,7 @@
         (if (eq (Biblioteca-nit auxBiblioteca) nit)
             (progn
                 (setq auxLibro (aref (Biblioteca-v_libros auxBiblioteca) contadorLibro))
-                (loop 
+                (loop                 
                     (if(eq (Libro-categoria auxLibro) 'AVENTURA)   
                         (setq numLibros (1+ numLibros) )  
                     )

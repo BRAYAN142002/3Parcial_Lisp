@@ -26,9 +26,9 @@
        (if(and(> opcion 0)(< opcion 4))
             (progn 
               (case opcion
-                (1 (setq auxCategoria "DRAMA"))
-                (2 (setq auxCategoria "SUSPENSO"))
-                (3 (setq auxCategoria "AVENTURA"))
+                (1 (setq auxCategoria 'DRAMA))
+                (2 (setq auxCategoria 'SUSPENSO))
+                (3 (setq auxCategoria 'AVENTURA))
                 (otherwise nil)
               )
               (setq contador 1)
