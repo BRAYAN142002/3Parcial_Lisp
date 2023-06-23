@@ -32,9 +32,11 @@
             (setq bandera 0)
             (print "Digite el Nit de la biblioteca: ")
             (setq nit (ingresarNumero))
+            (setq auxBiblioteca (make-Biblioteca))
+        
             (loop 
 
-                    
+                (setq v_libros (make-array 3))
                 (setq auxBiblioteca (aref v_bibliotecas contadorBiblioteca));obtiene la biblioteca en la posicion contadorBiblioteca
                 (if (= (Biblioteca-nit auxBiblioteca) nit);compara el nit de la biblioteca con el nit ingresado
                     (progn

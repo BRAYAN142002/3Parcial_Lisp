@@ -14,6 +14,7 @@
             (setq bandera 0);bandera para saber si se encontro la biblioteca
             (print "Digite el Codigo de la biblioteca: ")
             (setq nit (ingresarNumero))
+            ; (setq auxBiblioteca (make-Biblioteca))
             (loop 
                 (setq auxBiblioteca (aref v_bibliotecas contadorBiblioteca));obtiene la biblioteca en la posicion contadorBiblioteca
                 (if (= (Biblioteca-nit auxBiblioteca) nit);compara el nit de la biblioteca con el nit ingresado
