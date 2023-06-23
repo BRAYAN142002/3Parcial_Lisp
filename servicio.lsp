@@ -8,13 +8,9 @@
   )
 )
 
-
-
-
-
 ;Funcion para seleciionar una categoria
 (defun menuCategoria()
-  (format t" ~%") 
+  (format t"************ Categorias ************  ~%") 
 	(print "   1. DRAMA ")
 	(print "   2. SUSPENSO ")
 	(print "   3. AVENTURA ")
