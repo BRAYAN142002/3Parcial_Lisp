@@ -8,7 +8,7 @@
   )
 )
 
-;Funcion para seleciionar una categoria
+;Funcion para selecionar una categoria
 (defun menuCategoria()
   (format t"************ Categorias ************  ~%") 
 	(print "   1. DRAMA ")
@@ -18,7 +18,7 @@
   (setq contador 0)
   (loop
        (print "Digite la categoria:")	 
-       (setq opcion (read))
+       (setq opcion (ingresarNumero))
        (if(and(> opcion 0)(< opcion 4))
             (progn 
               (case opcion

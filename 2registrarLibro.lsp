@@ -36,7 +36,7 @@
 
                     
                 (setq auxBiblioteca (aref v_bibliotecas contadorBiblioteca));obtiene la biblioteca en la posicion contadorBiblioteca
-                (if (eq (Biblioteca-nit auxBiblioteca) nit);compara el nit de la biblioteca con el nit ingresado
+                (if (= (Biblioteca-nit auxBiblioteca) nit);compara el nit de la biblioteca con el nit ingresado
                     (progn
                         (if (eq (aref (Biblioteca-v_libros auxBiblioteca) 0) 0);verifica si el vector de libros esta vacio
                             (progn                   
