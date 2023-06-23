@@ -14,7 +14,7 @@
             (setq bandera 0);bandera para saber si se encontro la biblioteca
             (print "Digite el Codigo de la biblioteca: ")
             (setq nit (ingresarNumero))
-            ; (setq auxBiblioteca (make-Biblioteca))
+             (setq auxBiblioteca (make-Biblioteca))
             (loop 
                 (setq auxBiblioteca (aref v_bibliotecas contadorBiblioteca));obtiene la biblioteca en la posicion contadorBiblioteca
                 (if (= (Biblioteca-nit auxBiblioteca) nit);compara el nit de la biblioteca con el nit ingresado
@@ -22,7 +22,7 @@
                         (print "Datos de la biblioteca ")
                         (format t "~%Nit: ~D~%"(Biblioteca-nit auxBiblioteca)) 
                         (format t "Nombre: ~S~%"(Biblioteca-nombre auxBiblioteca))
-                        (format t "Direccion: ~S~%"(Biblioteca-direccion auxBiblioteca))               
+                        (format t "Direccion: ~S~%"(Biblioteca-direccion auxBiblioteca))             
                        
                         (if (eq (aref (Biblioteca-v_libros auxBiblioteca) 0) 0);verifica el array si esta lleno 
                             (progn
@@ -41,10 +41,10 @@
                                     (format t "Titulo: ~S~%"(Libro-titulo auxLibro))
                                     (format t "Categoria: ~S~%"(Libro-categoria auxLibro))
                                     (setq contadorLibro (+ contadorLibro 1))               
-                                    (when (>= contadorLibro longitudLibros) 
+                                    (when (> contadorLibro 2) 
                                         (return)
                                     )
-                                    (setq auxLibro (aref v_libros contadorLibro))
+                                    (setq auxLibro (aref (Biblioteca-v_libros auxBiblioteca) contadorLibro))
                                 )
                                 
                             )

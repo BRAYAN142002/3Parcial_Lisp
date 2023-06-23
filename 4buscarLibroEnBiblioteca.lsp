@@ -50,9 +50,9 @@
                                             (setq bandera1 (+ bandera1 1))
                                         )
                                        
-                                    (setq contadorLibro (+ contadorLibro 1))  
-                                    (when (>= contadorLibro longitudLibros)(return))
-                                    (setq auxLibro (aref v_libros contadorLibro))
+                                        (setq contadorLibro (+ contadorLibro 1))  
+                                        (when (> contadorLibro 2)(return))
+                                        (setq auxLibro (aref (Biblioteca-v_libros auxBiblioteca) contadorLibro))
                                     )
                                 )
                             )

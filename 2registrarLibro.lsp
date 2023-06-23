@@ -36,11 +36,13 @@
         
             (loop 
 
-                (setq v_libros (make-array 3))
+               
                 (setq auxBiblioteca (aref v_bibliotecas contadorBiblioteca));obtiene la biblioteca en la posicion contadorBiblioteca
                 (if (= (Biblioteca-nit auxBiblioteca) nit);compara el nit de la biblioteca con el nit ingresado
                     (progn
+                      (setq v_libros (make-array 3))
                         (if (eq (aref (Biblioteca-v_libros auxBiblioteca) 0) 0);verifica si el vector de libros esta vacio
+                            
                             (progn                   
                                 (loop 
                                     (format t "************ Libro # ~D ************"(+ contadorLibro 1))                                                
@@ -53,13 +55,13 @@
                                     (setf(Libro-categoria l)(menuCategoria))                      
                                     
                                     ;se asigna el libro al vector
-                                    (setf (aref v_libros contadorLibro) l)
+                                    ;(setf (aref v_libros contadorLibro) l)
+                                    (setf (aref (Biblioteca-v_libros auxBiblioteca) contadorLibro) l)
                                     (setq contadorLibro (+ contadorLibro 1))
                                     (when (> contadorLibro 2)
                                         (return)
                                     )
                                 ) 
-                                (setf (Biblioteca-v_libros auxBiblioteca) v_libros);se asigna el vector de libros a la biblioteca
                                 (setq bandera 2)
                             )     
                             (setq bandera 1)       
